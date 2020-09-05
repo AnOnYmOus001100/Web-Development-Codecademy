@@ -1,0 +1,232 @@
+<!--
+	Author: AnOnYmOus001100
+	Date: 05/08/2020
+
+GETTING MORE ADVANCED WITH DESIGN
+Paint Store
+In this project, you will follow step-by-step instructions to improve a vibrant, color-rich web page for a home paint business. It displays information about using color in a home and color swatches with varying lightness, saturation, and hue.
+
+The page is almost ready to be published. You’ll be making the following color-related changes:
+
+Exchange some named colors with hexadecimal color values.
+Add some semi-transparent overlays to the banner and footer using RGBA.
+Fill in the first color column of the swatch samples using HSL colors.
+The website’s existing index.html and style.css document files are displayed in the text editor.
+
+If you get stuck during this project or would like to see an experienced developer work through it, click “Get Help“ to see a project walkthrough video.
+
+Tasks:
+
+1.
+In style.css, find the three CSS rules that use the named color orange. This color is not exactly the right orange to match the paint store brand. Replace orange with the hex color #ff8000.
+
+The first place of orange is the background of the header, under the selector header.
+
+The second location is the text color for the “Color Guide” heading, under the selector #color-guide h2.
+
+The final location is in the button in the footer, under the selector footer .button.
+
+
+2.
+Make the main title text of the h1 element semi-transparent to match the spooky text theme. To do so, set the color property with rgba() to make the text black (0 for red, green, and blue values) with 0.7 alpha value.
+
+
+3.
+Give the header’s background image a semi-transparent orange overlay to simulate a photographic filter.
+
+In the #banner:before selector on line 95, add a background color with the value rgba(255, 128, 0, 0.75).
+
+
+4.
+Now do the same for the footer, adding a semi-transparent layer on top of the image to soften and darken it.
+
+Find the selector footer:before and add a background color with same semi-transparent value that you used for the h1 element.
+
+
+5.
+Soften the subtitles which say “Saturation,” “Lightness,” and “Hue.” Currently, they are the default black.
+
+Add a property to the .color .swatches h4 rule to change the text color to the light gray hex value #9b9b9b.
+
+6.
+There are three span tags which describe the “base color” for each color section. Each of them falls under a <div> tag with a class specific to the color. Currently, all these base colors are described with hex values. Change these to HSL.
+
+For example, the value for color within the rule .reds .base-color is currently #ff002b. Change this to the HSL value hsl(350, 100%, 50%).
+
+You can find the base color values for the green and blue sections in the web page text. Update those to their corresponding HSL value as well.
+
+
+7.
+In each section (red, green, and blue), there are 15 color cells. Each cell has its own rule specifying its color in style.css. Notice that at the beginning of each color swatch, the first cell is empty. Find the rule for each of the empty cells and fill in the hsl() value which completes the pattern.
+
+For example, the first blank swatch is .reds .lightness .color-1. In each HSL value in this section, notice that the lightness value decreases by 15 percentage points. Following the pattern, fill in the value for the background-value for this cell, hsl(350, 100%, 80%).
+
+Use the patterns for each of the other 8 rows and fill in the missing cell for each row.
+
+In style.css, there is a comment above each empty cell’s rule that describes the pattern.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>House Store</title>
+  <link rel="stylesheet" type="text/css" href="resources/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="resources/css/style3.css">
+  <link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="image-container logo-small">
+      <img src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-6/logo-sm.png">
+    </div>
+    <div class="image-container logo-big">
+      <img src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-6/logo-lg.png">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Tools</a></li>
+        <li><a href="#">Lumber</a></li>
+        <li><a href="#">Paint</a></li>
+        <li><a href="#">Garden</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <div id="banner">
+    <h1>PAINTING IS SCARY</h1>
+    <p>But it doesn't have to be! Let our handy Virtual Paint Department help guide you through the process of choosing a color. Know the hue? You know what to do. Click the order button and we'll get the paint to you.</p>
+  </div>
+
+  <!-- Color Guide -->
+  <div id="color-guide">
+    <div class="introduction">
+      <h2>Color Guide</h2>
+      <p>Here at HouseStore, we take color seriously. In each of the following sections, well explore our base colors in swatches that incrementally change three values: <strong>Hue</strong>, <strong>Saturation</strong> and <strong>Lightness</strong>. You'll be able to pick from a wide variety of colors that all work well with each other because they <strong>stem from the same value.</strong></p>
+    </div>
+
+    <!-- Red Swatches -->
+    <div class="color reds">
+      <div class="information">
+        <h3>Reds</h3>
+        <p>Firetrucks, lipstick, fresh berries &mdash; red is a color with power, emotion, intensity. For this reason we recommend using reds as accent colors. Red is particularly suited to kitchens, as it is said to evoke hunger!</p><p>Our base red is <span class="base-color">HSL (350, 100, 50)</span></p>
+        <div class="image-container">
+          <img src="	https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-6/reds.png">
+        </div>
+      </div>
+      <div class="swatches">
+        <h4>Lightness</h4>
+        <div class="swatch lightness">
+          <div class="color-1"></div>
+          <div class="color-2"></div>
+          <div class="color-3"></div>
+          <div class="color-4"></div>
+          <div class="color-5"></div>
+        </div>
+        <h4>Saturation</h4>
+        <div class="swatch saturation">
+          <div class="color-1"></div>
+          <div class="color-2"></div>
+          <div class="color-3"></div>
+          <div class="color-4"></div>
+          <div class="color-5"></div>
+        </div>
+        <h4>Hue</h4>
+        <div class="swatch hue">
+          <div class="color-1"></div>
+          <div class="color-2"></div>
+          <div class="color-3"></div>
+          <div class="color-4"></div>
+          <div class="color-5"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Green Swatches -->
+    <div class="color greens">
+      <div class="information">
+        <h3>Greens</h3>
+        <p>They say that geniuses choose green &mdash; we think any of these verdant colors will look smart! Deck your halls like a lush outdoor space, adorn your rooms with emerald, or just make your houseguests green with envy!</p>
+        <p>Our base green is <span class="base-color">HSL (130, 100, 50)</span></p>
+        <div class="image-container">
+          <img src="	https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-6/greens.png">
+        </div>
+      </div>
+      <div class="swatches">
+        <h4>Lightness</h4>
+        <div class="swatch lightness">
+          <div class="color-1"></div>
+          <div class="color-2"></div>
+          <div class="color-3"></div>
+          <div class="color-4"></div>
+          <div class="color-5"></div>
+        </div>
+        <h4>Saturation</h4>
+        <div class="swatch saturation">
+          <div class="color-1"></div>
+          <div class="color-2"></div>
+          <div class="color-3"></div>
+          <div class="color-4"></div>
+          <div class="color-5"></div>
+        </div>
+        <h4>Hue</h4>
+        <div class="swatch hue">
+          <div class="color-1"></div>
+          <div class="color-2"></div>
+          <div class="color-3"></div>
+          <div class="color-4"></div>
+          <div class="color-5"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blue Swatches -->
+    <div class="color blues">
+      <div class="information">
+        <h3>Blues</h3>
+        <p>Blues dont give us the blues &mdash; in fact, blue is one of the most popular colors in home interiors, and for good reason! Energizing like a summer sky, calming like a lakeshore, light as mist or deep as indigo, blue can do it all.</p>
+        <p>Our base blue is <span class="base-color">HSL (220, 100, 50)</span></p>
+        <div class="image-container">
+          <img src="	https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-6/blues.png">
+        </div>
+      </div>
+      <div class="swatches">
+        <h4>Lightness</h4>
+        <div class="swatch lightness">
+          <div class="color-1"></div>
+          <div class="color-2"></div>
+          <div class="color-3"></div>
+          <div class="color-4"></div>
+          <div class="color-5"></div>
+        </div>
+        <h4>Saturation</h4>
+        <div class="swatch saturation">
+          <div class="color-1"></div>
+          <div class="color-2"></div>
+          <div class="color-3"></div>
+          <div class="color-4"></div>
+          <div class="color-5"></div>
+        </div>
+        <h4>Hue</h4>
+        <div class="swatch hue">
+          <div class="color-1"></div>
+          <div class="color-2"></div>
+          <div class="color-3"></div>
+          <div class="color-4"></div>
+          <div class="color-5"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <strong>All set? Click below to order.</strong>
+    <p>Most colors can be delivered to your door within 48 hours. We'll reach out if your color needs some extra attention, which could delay shipment.</p>
+    <a href="#" class="button">Order My Paint</a>
+  </footer>
+</body>
+</html>
