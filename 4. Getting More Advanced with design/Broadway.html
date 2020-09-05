@@ -1,0 +1,127 @@
+<!--
+	Author: AnOnYmOus001100
+	Date: 05/09/2020
+
+GETTING MORE ADVANCED WITH DESIGN
+Broadway
+In this project, you will use properties such as display and position to improve the layout of the landing page for a fictional design firm, Broadway Design.
+
+The site has some style rules to begin with. You will improve the layout and positioning of the navigation menu at the top of the page and the three supporting sections (Design, Develop, Deploy) below the image.
+
+If you get stuck during this project or would like to see an experienced developer work through it, click “Get Help“ to see a project walkthrough video.
+
+Tasks:
+
+1.
+The <header> currently scrolls with the rest of the document.
+
+Set its position property so that it stays stuck to the top of the window when the document is scrolled.
+
+2.
+The <header> has shrunk!
+
+Change the width of the same element so that it stretches across its entire parent element.
+
+3.
+List items (<li>) inside of the navigation section (<nav>) are currently displayed as a list.
+
+Set their display property so that they can appear next to each other horizontally (but so that you still set their width in the next task).
+
+4.
+Set the width of the same elements to 80 pixels.
+
+5.
+After changing the position of the <header> element to fixed, the contents of the entire site after it shifted upwards.
+
+Set the position of <main> so that we can position it relatively.
+
+6.
+The <header> has disappeared behind the <main>.
+
+Use z-index to make the <header> visible.
+
+
+7.
+Now the navigation bar looks good, but it is blocking the title at the top of the page.
+
+Offset <main> by 80 pixels from the top.
+
+8.
+Now, fix up the supporting element style below the image.
+
+Add a declaration to the .supporting .col rule set so that these elements can appear horizontally next to each other but have defined height and width.
+
+
+Stuck? Get a hint
+9.
+Inspect the .supporting .col elements—they don’t seem to be flowing horizontally yet because they have no set width. Set the width and height of .supporting .col elements to 200 pixels.
+
+10.
+Great work, the Broadway Design site looks much better!
+
+If you want to continue coding, challenge yourself to make the <footer> element also fixed to the bottom of the page regardless of scrolling.
+
+-->
+
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
+    <link href='style2.css' rel='stylesheet' type='text/css'/>
+  </head>
+
+  <body>
+    
+    <header>
+        <nav>
+          <ul>
+            <li> About </li> <li> Work </li> <li> Team </li> <li> Contact </li>
+          </ul>
+        </nav>
+    </header>
+
+    <main>
+      <div class="jumbotron">
+        <div class="container">  
+          <h1>We are Broadway</h1>
+          <a href="#" class="btn-main"> Get Started </a>
+        </div>
+      </div>
+    </main>
+
+    <section class="supporting">
+      <div class="container">
+        
+        <div class="col">
+          <img src="https://s3.amazonaws.com/codecademy-content/projects/broadway/design.svg">
+          <h2>Design</h2>
+          <p>Make your projects look great and interact beautifully.</p>
+          <a href="#"> Learn More</a><br>
+        </div>
+        
+        <div class="col">
+          <img src="https://s3.amazonaws.com/codecademy-content/projects/broadway/develop.svg">
+          <h2>Develop</h2>
+          <p>Use modern tools to turn your design into a web site</p>
+          <a href="#"> Learn More</a><br>
+        </div>
+        
+        <div class="col">
+          <img src="https://s3.amazonaws.com/codecademy-content/projects/broadway/deploy.svg">
+          <h2>Deploy</h2>
+          <p>Use modern tools to turn your design into a web site</p>
+          <a href="#"> Learn More</a><br>
+        </div>
+        
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; Broadway 2017</p>
+      </div>
+    </footer>
+    
+  </body>
+</html>
