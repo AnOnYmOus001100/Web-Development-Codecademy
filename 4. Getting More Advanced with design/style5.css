@@ -1,0 +1,99 @@
+body {
+  font-family: 'Alegreya sans', sans-serif;
+  margin: 0 10%;
+}
+
+.container {
+  border: 1px solid 	#FFD700;
+  padding: 10px;
+  margin: 10px auto;
+}
+
+.color-container {
+  width: 100%;
+}
+
+.color-panel {
+  display: inline-block;
+  width: 32%;
+  text-align: center;
+  margin: 20px auto;
+  min-height: 100px;
+}
+
+.tomato {
+  background-color: #FF6347;
+  color: #000;
+}
+
+.orange {
+  background-color: #FFA500;
+}
+
+.dodger-blue {
+  background-color: #1E90FF;
+}
+
+.medium-sea-green {
+  background-color: #3CB371;
+}
+
+.violet {
+  background-color: #EE82EE;
+}
+
+.slate-blue {
+  background-color: #6A5ACD;
+}
+
+.font-panel {
+  width: 45%;
+  display: inline-block;
+}
+
+.font-label {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.regular {
+  font-style: normal;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.alegreya-sans {
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+.cormorant-garamond {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.plex-sans {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.text-panel h1 {
+  font-weight: 700;
+  font-size: 26px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.text-panel h2 {
+  font-weight: 500;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.text-panel p {
+  font-weight: 400;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
