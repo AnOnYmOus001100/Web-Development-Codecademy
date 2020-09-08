@@ -1,0 +1,111 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: silver;
+}
+
+header {
+  background-color: rgb(43, 137, 237);
+}
+
+nav {
+  padding: 5px 20px;
+}
+
+a {
+  color: white;
+}
+
+h1 {
+    background-color: violet;
+    color: white;
+    font-family: Georgia, serif;
+}
+
+h3 {
+  font-family: Arial,sans-serif;
+  background-color: rgb(219, 143, 50);
+  color: rgb(110, 9, 9);
+}
+
+h4 {
+  background-color: yellow;
+  color: rgb(227, 44, 27);
+}
+
+.intro {
+  background-color: rgb(119, 188, 252);
+  font-family: "Courier New",serif;
+}
+
+.perks {
+  background-color: rgb(147, 59, 235);
+  font-family: Verdana, sans-serif;
+}
+
+.info {
+  background-color: rgb(80, 212, 28);
+}
+
+.plans {
+  background-color: rgb(217, 187, 22);
+  color: white;
+}
+
+.plans h4 {
+  background-color: rgb(16, 213, 227);
+  color: red;
+}
+
+footer {
+  background-color: rgb(219, 252, 83);
+}
+
+@media only screen and (min-width: 960px) {
+  figure {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  nav {
+    padding: 0;
+  }
+
+.intro {
+    font-size: 2rem;
+  }
+
+.perks {
+  font-size: 1.5rem;
+}
+
+.info {
+  font-size: 1rem;
+}
+
+.plans {
+  font-size: 1rem;
+}
+}
+
+@media only screen and (min-width: 480px) {
+  
+  .intro {
+    font-size: 1.5rem;
+  }
+
+  .perks {
+    font-size: 1rem;
+  }
+
+  .info {
+    display: none;
+  }
+
+  footer {
+    display: none;
+  }
+}
